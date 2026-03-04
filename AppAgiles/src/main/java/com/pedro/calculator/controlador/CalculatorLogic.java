@@ -1,4 +1,4 @@
-package controlador;
+package com.pedro.calculator.controlador;
 
 /**
  * Clase encargada de las operaciones matemáticas de la calculadora.

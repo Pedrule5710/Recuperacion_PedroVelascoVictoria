@@ -1,4 +1,4 @@
-package vista;
+package com.pedro.calculator.vista;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import controlador.CalculatorLogic;
+import com.pedro.calculator.controlador.CalculatorLogic;
 
 // Importamos la lógica de otro paquete para cumplir con la modularidad
 
