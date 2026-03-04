@@ -8,17 +8,7 @@ oportuno. Usa el formato [Markdown](https://www.markdownguide.org/cheat-sheet/)
 
 <!-- Indica aquí las modificaciones que hayas realizado, ejemplo: -->
 
-### Ordenación de los botones
-
-<!-- Puedes borrar este ejemplo, todo el apartado -->
-
-He ordenado la creación de elementos en la pantalla principal. Modificando el
-constructor de la clase Main.
-
-El objetivo de este cambio es ordenar los botones de una manera similar a como
-otras aplicaciones de calculadoras tienen los botones colocados. Además, el
-orden de creación es acorde a dónde se encuentran los botones en la pantalla,
-siguiendo un orden de izquierda a derecha y de arriba a abajo.
+### Creacion de los paquetes vista y controlador y separacion de la clase en las necesarias.
 
 ## UT4. Ejecución de herramientas
 
@@ -41,43 +31,80 @@ npm i
 
 #### Ejecución
 
-Para ejecutar los tests, usa el siguiente comando:
+Para ejecutar los tests, pulsamos en nuestra clase de test , run y run maven:
 
-```
-npm run test
-```
+
 
 #### Salida
 
 La ejecución debe dar el siguiente resultado:
-
-```
-> test
-> jest
-
-FAIL ./sum.test.js
-  ✕ adds 1 + 2 to equal 3 (4 ms)
-
-  ● adds 1 + 2 to equal 3
-
-    expect(received).toBe(expected) // Object.is equality
-
-    Expected: 3
-    Received: 4
-
-      2 |
-      3 | test('adds 1 + 2 to equal 3', () => {
-    > 4 |   expect(sum(1, 2)).toBe(3);
-        |                     ^
-      5 | });
-      6 |
-
-      at Object.toBe (sum.test.js:4:21)
-
-Test Suites: 1 failed, 1 total
-Tests:       1 failed, 1 total
-Snapshots:   0 total
-Time:        0.378 s
-Ran all test suites.
-Error: Process completed with exit code 1.
-```
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] [1m------------------------< [0;36mAppAgiles:AppAgiles[0;1m >-------------------------[m
+[INFO] [1mBuilding AppAgiles 0.0.1-SNAPSHOT[m
+[INFO]   from pom.xml
+[INFO] [1m--------------------------------[ jar ]---------------------------------[m
+[INFO] 
+[INFO] [1m--- [0;32mresources:3.3.1:resources[m [1m(default-resources)[m @ [36mAppAgiles[0;1m ---[m
+[INFO] skip non existing resourceDirectory C:\Users\Pedro\Desktop\workAgiles\RepoLocalRecuperacion\Recuperacion_PedroVelascoVictoria\AppAgiles\src\main\resources
+[INFO] 
+[INFO] [1m--- [0;32mcompiler:3.13.0:compile[m [1m(default-compile)[m @ [36mAppAgiles[0;1m ---[m
+[INFO] Recompiling the module because of [1madded or removed source files[m.
+[INFO] Compiling 2 source files with javac [debug release 21] to target\classes
+[INFO] 
+[INFO] [1m--- [0;32mresources:3.3.1:testResources[m [1m(default-testResources)[m @ [36mAppAgiles[0;1m ---[m
+[INFO] skip non existing resourceDirectory C:\Users\Pedro\Desktop\workAgiles\RepoLocalRecuperacion\Recuperacion_PedroVelascoVictoria\AppAgiles\src\test\resources
+[INFO] 
+[INFO] [1m--- [0;32mcompiler:3.13.0:testCompile[m [1m(default-testCompile)[m @ [36mAppAgiles[0;1m ---[m
+[INFO] Recompiling the module because of [1mchanged dependency[m.
+[INFO] Compiling 1 source file with javac [debug release 21] to target\test-classes
+[INFO] 
+[INFO] [1m--- [0;32msurefire:3.2.5:test[m [1m(default-test)[m @ [36mAppAgiles[0;1m ---[m
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.2.5/surefire-junit-platform-3.2.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.2.5/surefire-junit-platform-3.2.5.pom (4.7 kB at 5.3 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.2.5/surefire-providers-3.2.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.2.5/surefire-providers-3.2.5.pom (2.6 kB at 18 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.2.5/common-java5-3.2.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.2.5/common-java5-3.2.5.pom (2.8 kB at 21 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.9.3/junit-platform-launcher-1.9.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.9.3/junit-platform-launcher-1.9.3.pom (3.0 kB at 21 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.pom (3.2 kB at 24 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.pom (1.7 kB at 11 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.pom (2.8 kB at 22 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.2.5/surefire-junit-platform-3.2.5.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.2.5/surefire-junit-platform-3.2.5.jar (27 kB at 70 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.2.5/common-java5-3.2.5.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.9.3/junit-platform-launcher-1.9.3.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.9.3/junit-platform-launcher-1.9.3.jar (169 kB at 346 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.jar (189 kB at 322 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar (7.7 kB at 11 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.2.5/common-java5-3.2.5.jar (18 kB at 24 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar (103 kB at 134 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.10.2/junit-platform-launcher-1.10.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.10.2/junit-platform-launcher-1.10.2.pom (3.0 kB at 19 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.10.2/junit-platform-launcher-1.10.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.10.2/junit-platform-launcher-1.10.2.jar (184 kB at 702 kB/s)
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.pedro.calculadora.CalculadoraTest.[1mCalculadoraTest[m
+[INFO] [1;32mTests run: [0;1;32m6[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.265 s -- in com.pedro.calculadora.CalculadoraTest.[1mCalculadoraTest[m
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] [1;32mTests run: 6, Failures: 0, Errors: 0, Skipped: 0[m
+[INFO] 
+[INFO] [1m------------------------------------------------------------------------[m
+[INFO] [1;32mBUILD SUCCESS[m
+[INFO] [1m------------------------------------------------------------------------[m
+[INFO] Total time:  10.272 s
+[INFO] Finished at: 2026-03-04T11:18:29+01:00
+[INFO] [1m------------------------------------------------------------------------[m
