@@ -23,4 +23,4 @@ jobs:
 
       # 3. Ejecutar el comando de Maven para el Linter
       - name: Run Checkstyle
-        run: mvn checkstyle:check
+        run: cd AppAgiles && mvn checkstyle:check
