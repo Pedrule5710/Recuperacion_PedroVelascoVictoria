@@ -8,17 +8,10 @@ oportuno. Usa el formato [Markdown](https://www.markdownguide.org/cheat-sheet/)
 
 <!-- Indica aquí las modificaciones que hayas realizado, ejemplo: -->
 
-### Ordenación de los botones
+###CREACION DE PAQUETES
 
-<!-- Puedes borrar este ejemplo, todo el apartado -->
-
-He ordenado la creación de elementos en la pantalla principal. Modificando el
-constructor de la clase Main.
-
-El objetivo de este cambio es ordenar los botones de una manera similar a como
-otras aplicaciones de calculadoras tienen los botones colocados. Además, el
-orden de creación es acorde a dónde se encuentran los botones en la pantalla,
-siguiendo un orden de izquierda a derecha y de arriba a abajo.
+He creado dos paquetes y separado la clase original en dos para tenerlo de manera mas clara organizada y modular
+la he dividido en los paquetes vista y controlador y en las clases main y calculatorLogic.
 
 ## UT4. Ejecución de herramientas
 
