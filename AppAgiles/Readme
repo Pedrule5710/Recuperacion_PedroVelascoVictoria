@@ -8,7 +8,15 @@ oportuno. Usa el formato [Markdown](https://www.markdownguide.org/cheat-sheet/)
 
 <!-- Indica aquí las modificaciones que hayas realizado, ejemplo: -->
 
-### Creacion de los paquetes vista y controlador y separacion de la clase en las necesarias.
+###1. Reestructuración de Paquetes y ModularizaciónSe ha aplicado el principio de Separación de Responsabilidades dividiendo la clase única Main.java en paquetes 
+específicos:main.java.com.pedro.calculator.vista: Contiene la interfaz gráfica (Swing), encargada únicamente de la visualización y captura de eventos de
+ usuario.main.java.com.pedro.calculator.controlador: Contiene la clase CalculadoraLogic.java (o CalculadoraLogica),
+ donde se ha extraído toda la lógica matemática (Factorial, Exponente, etc.) para permitir su reutilización y testeo independiente.
+###2. Implementación de MavenEl proyecto se ha convertido a un proyecto Maven, lo que permite una gestión profesional de dependencias (como JUnit 5) y 
+controla el ciclo de vida de la aplicación de forma automatizada.
+###3. Automatización y DevOps (Checkstyle)Se ha integrado un sistema de Integración Continua (CI) mediante GitHub Actions.Se ha creado un archivo de configuración 
+.github/workflows/checkstyle.yml que ejecuta el linter CheckStyle automáticamente en cada Pull Request para garantizar la calidad del código.
+Se ha configurado el plugin maven-checkstyle-plugin en el pom.xml para permitir la validación local de reglas de estilo.
 
 ## UT4. Ejecución de herramientas
 
@@ -21,10 +29,8 @@ ejemplo: -->
 
 #### Prerrequisitos
 
-Se debe tener NodeJS instalado y haber descargado e instalado las dependencias,
-que se hace mediante el siguiente comando, suponiendo que se encuentra en la
-carpeta raíz del repositorio:
-
+Se debe tener las librerias de JUnit en el proyecto, el pom actualizado con lo necesario para correr JUnit
+y una estructura de java adaptada a JUnit
 ```
 npm i
 ```
@@ -108,3 +114,4 @@ La ejecución debe dar el siguiente resultado:
 [INFO] Total time:  10.272 s
 [INFO] Finished at: 2026-03-04T11:18:29+01:00
 [INFO] [1m------------------------------------------------------------------------[m
+
