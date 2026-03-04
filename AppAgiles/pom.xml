@@ -37,7 +37,7 @@
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <version>3.3.1</version>
                 <configuration>
-                    <configLocation>checkstyle.xml</configLocation>
+                    <configLocation>checkstyle.yml</configLocation>
                     <failsOnError>false</failsOnError>
                     <failOnViolation>false</failOnViolation>
                 </configuration>

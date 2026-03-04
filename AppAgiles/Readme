@@ -18,6 +18,31 @@ controla el ciclo de vida de la aplicación de forma automatizada.
 .github/workflows/checkstyle.yml que ejecuta el linter CheckStyle automáticamente en cada Pull Request para garantizar la calidad del código.
 Se ha configurado el plugin maven-checkstyle-plugin en el pom.xml para permitir la validación local de reglas de estilo.
 
+
+
+UT3. Checkstyle
+
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] [1m------------------------< [0;36mAppAgiles:AppAgiles[0;1m >-------------------------[m
+[INFO] [1mBuilding AppAgiles 0.0.1-SNAPSHOT[m
+[INFO]   from pom.xml
+[INFO] [1m--------------------------------[ jar ]---------------------------------[m
+[INFO] 
+[INFO] [1m--- [0;32mcheckstyle:3.3.1:check[m [1m(default-cli)[m @ [36mAppAgiles[0;1m ---[m
+[INFO] [1m------------------------------------------------------------------------[m
+[INFO] [1;31mBUILD FAILURE[m
+[INFO] [1m------------------------------------------------------------------------[m
+[INFO] Total time:  2.433 s
+[INFO] Finished at: 2026-03-04T11:37:40+01:00
+[INFO] [1m------------------------------------------------------------------------[m
+[ERROR] Failed to execute goal [32morg.apache.maven.plugins:maven-checkstyle-plugin:3.3.1:check[m [1m(default-cli)[m on project [36mAppAgiles[m: [1;31mFailed during checkstyle execution[m: Unable to find configuration file at location: checkstyle.yml: Could not find resource 'checkstyle.yml'. -> [1m[Help 1][m
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[ERROR] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
 ## UT4. Ejecución de herramientas
 
 <!-- Indica aquí cómo has ejecutado las herramientas y cuál ha sido la salida,
@@ -31,9 +56,7 @@ ejemplo: -->
 
 Se debe tener las librerias de JUnit en el proyecto, el pom actualizado con lo necesario para correr JUnit
 y una estructura de java adaptada a JUnit
-```
-npm i
-```
+ 
 
 #### Ejecución
 
@@ -114,4 +137,3 @@ La ejecución debe dar el siguiente resultado:
 [INFO] Total time:  10.272 s
 [INFO] Finished at: 2026-03-04T11:18:29+01:00
 [INFO] [1m------------------------------------------------------------------------[m
-
